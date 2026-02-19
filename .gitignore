@@ -1,0 +1,14 @@
+# Uploads (user content)
+uploads/*
+!uploads/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Environment specific
+*.log
