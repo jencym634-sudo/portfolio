@@ -38,7 +38,6 @@ require_once 'includes/header.php';
     <div class="hero-content fade-in">
         <div class="hero-badge">
             <span class="dot"></span>
-            <h1>CICD</h1>
             Available for work
         </div>
 
