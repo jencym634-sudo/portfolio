@@ -1,10 +1,8 @@
 -- ============================================
 -- Jency Portfolio Database Schema
--- MySQL Database: jency
+-- InfinityFree Database: if0_41196563_jency
+-- Run this SQL in InfinityFree phpMyAdmin
 -- ============================================
-
-CREATE DATABASE IF NOT EXISTS `jency` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `jency`;
 
 -- Admin Users
 CREATE TABLE IF NOT EXISTS `admin_users` (
