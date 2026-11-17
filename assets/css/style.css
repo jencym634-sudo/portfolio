@@ -311,16 +311,16 @@ button {
     max-width: 48vw;
 }
 
-/* Hero Content Grid (Expansive 93vw Width) */
+/* Hero Content Grid (Centered Max-Width Container with Reduced In-Between Gap) */
 .hero-container {
-    width: var(--container-width);
+    width: min(92vw, 1380px);
     margin: 0 auto;
     padding: 10px 0 40px;
     display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(420px, 0.75fr);
+    grid-template-columns: minmax(0, 1.18fr) auto;
     align-items: center;
-    justify-content: space-between;
-    gap: clamp(40px, 6vw, 100px);
+    justify-content: center;
+    gap: clamp(44px, 4.5vw, 64px);
     position: relative;
     z-index: 2;
 }
@@ -328,7 +328,7 @@ button {
 /* Left Column: Narrative */
 .hero-left-col {
     position: relative;
-    max-width: 880px;
+    max-width: 660px;
 }
 
 .hero-eyebrow {
@@ -351,7 +351,7 @@ button {
 /* Main Editorial Headline */
 .hero-headline {
     font-family: var(--font-serif);
-    font-size: clamp(3rem, 4.6vw, 4.8rem);
+    font-size: clamp(2.8rem, 3.8vw, 4.2rem);
     font-weight: 700;
     line-height: 1.15;
     color: var(--text-primary);
@@ -477,18 +477,18 @@ button {
     transform: translate(2px, -2px);
 }
 
-/* Right Column: Anchored Cleanly to Right Edge */
+/* Right Column: Balanced Centered Alignment */
 .hero-right-col {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
-    width: 100%;
+    width: auto;
 }
 
 .portrait-stage {
     position: relative;
-    width: clamp(410px, 31vw, 500px);
-    height: clamp(520px, 39vw, 620px);
+    width: clamp(390px, 28vw, 450px);
+    height: clamp(500px, 36vw, 570px);
     margin: 0;
 }
 
@@ -877,6 +877,19 @@ button {
 
     .nav-container {
         width: var(--container-width);
+    }
+
+    .nav-logo {
+        font-size: 1.45rem;
+        white-space: nowrap;
+    }
+
+    .role-pill {
+        padding: 5px 12px;
+    }
+
+    .role-text {
+        font-size: 0.76rem;
     }
 
     .nav-menu {
