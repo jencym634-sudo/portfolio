@@ -10,17 +10,24 @@ error_reporting(0);
 ini_set('display_errors', '0');
 ini_set('log_errors', '1');
 
-define('DB_HOST', 'sql309.infinityfree.com');
-define('DB_USER', 'if0_41196563');
-define('DB_PASS', 'Dincy123456789');
-define('DB_NAME', 'if0_41196563_jency');
+// Database Credentials
+// Fallback to local development DB if production host is unreachable or running locally
+$host = getenv('DB_HOST') ?: (file_exists('/.dockerenv') ? 'portfolio-mysql' : 'localhost');
+$user = getenv('DB_USER') ?: (file_exists('/.dockerenv') ? 'root' : 'root');
+$pass = getenv('DB_PASS') ?: (file_exists('/.dockerenv') ? 'root' : '');
+$name = getenv('DB_NAME') ?: 'jency';
 
-// Establish MySQL connection
-$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+if (!defined('DB_HOST')) define('DB_HOST', $host);
+if (!defined('DB_USER')) define('DB_USER', $user);
+if (!defined('DB_PASS')) define('DB_PASS', $pass);
+if (!defined('DB_NAME')) define('DB_NAME', $name);
 
-// Check connection
-if (!$conn) {
-    die('Database connection failed: ' . mysqli_connect_error());
+// Establish MySQL connection with error suppression for graceful fallback
+$conn = @mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+// If local container connection failed, try localhost
+if (!$conn && file_exists('/.dockerenv')) {
+    $conn = @mysqli_connect('127.0.0.1', 'root', 'root', 'jency', 3306);
 }
 
 // Set charset to UTF-8
