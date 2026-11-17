@@ -7,64 +7,67 @@ if (!isset($page_title))
     $page_title = 'Jency | Portfolio';
 ?>
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Jency — Full-Stack Developer & Creative Designer. View my projects, skills, and get in touch.">
-    <meta name="keywords" content="developer, portfolio, full-stack, web developer, designer">
-    <meta name="author" content="Jency">
+        content="Jency M. — Product Engineer & Software Developer. Explore my work, product thinking, and journey.">
+    <meta name="keywords" content="developer, product engineer, portfolio, software developer, quality engineer">
+    <meta name="author" content="Jency M.">
     <title>
-        <?php echo e($page_title); ?>
+        <?php echo e($page_title ?? 'Jency M. | Product Engineer'); ?>
     </title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Main Stylesheet (Auto Cache-Busting via filemtime) -->
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo @filemtime('assets/css/style.css') ?: time(); ?>">
 </head>
 
 <body>
 
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-blob"></div>
-        <div class="loader-blob loader-blob-2"></div>
-        <div class="loader-text">Loading<span class="loader-dots">...</span></div>
-    </div>
-
-    <!-- Scroll Progress Bar -->
+    <!-- Subtle Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>Jency<span class="logo-bracket"> /&gt;</span>
-            </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-                    <i class="fas fa-moon" id="themeIcon"></i>
-                </button>
-                <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
+    <!-- Navigation Header -->
+    <header class="navbar-wrapper">
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <!-- Left: Name Logo with Olive Accent Dot -->
+                <a href="#home" class="nav-logo">
+                    Jency M<span class="logo-dot"></span>
+                </a>
+
+                <!-- Center: Primary Nav Links -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#journey" class="nav-link">Journey</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <!-- Right: Product Engineer Badge & Mobile Hamburger -->
+                <div class="nav-actions">
+                    <div class="role-pill">
+                        <span class="role-dot"></span>
+                        <span class="role-text">Product Engineer</span>
+                    </div>
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
             </div>
-        </div>
-    </nav>
+            <!-- Thin divider beneath navigation -->
+            <div class="nav-divider"></div>
+        </nav>
+    </header>

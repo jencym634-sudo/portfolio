@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeIcon = document.getElementById('themeIcon');
     const html = document.documentElement;
 
-    // Check saved theme
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    // Theme Default (Warm Ivory Editorial)
+    const savedTheme = localStorage.getItem('theme') || 'light';
     html.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 

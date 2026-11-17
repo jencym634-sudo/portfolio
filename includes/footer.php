@@ -3,9 +3,9 @@
     <div class="footer-container">
         <div class="footer-brand">
             <a href="#home" class="footer-logo">
-                <span class="logo-bracket">&lt;</span>Jency<span class="logo-bracket"> /&gt;</span>
+                Jency M<span class="logo-dot"></span>
             </a>
-            <p class="footer-tagline">Building the future, one line of code at a time.</p>
+            <p class="footer-tagline">Product Thinking · Software Development · Quality Engineering</p>
         </div>
         <div class="footer-socials">
             <?php
@@ -13,15 +13,13 @@
             foreach ($social_links as $link):
                 ?>
                 <a href="<?php echo e($link['url']); ?>" target="_blank" rel="noopener noreferrer"
-                    class="social-link glass-card-mini" title="<?php echo e($link['platform']); ?>">
+                    class="social-link" title="<?php echo e($link['platform']); ?>">
                     <i class="<?php echo e($link['icon']); ?>"></i>
                 </a>
             <?php endforeach; ?>
         </div>
         <div class="footer-bottom">
-            <p>&copy;
-                <?php echo date('Y'); ?> Jency. All rights reserved.
-            </p>
+            <p>&copy; <?php echo date('Y'); ?> Jency M. All rights reserved.</p>
         </div>
     </div>
 </footer>
