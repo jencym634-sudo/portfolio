@@ -280,9 +280,9 @@ button {
 /* ===== HERO SECTION ===== */
 .hero {
     position: relative;
-    min-height: 100vh;
-    padding-top: calc(var(--nav-height) + 36px);
-    padding-bottom: 70px;
+    min-height: calc(100vh - var(--nav-height));
+    padding-top: calc(var(--nav-height) + 24px);
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,26 +311,24 @@ button {
     max-width: 48vw;
 }
 
-/* Hero Content Grid (Centered Max-Width Container with Reduced In-Between Gap) */
+/* Hero Content: Balanced Two-Column Desktop Grid (52% left, 42% right, 48-64px gap) */
 .hero-container {
-    width: auto;
-    max-width: 860px;
+    width: min(92vw, 1320px);
     margin: 0 auto;
     padding: 10px 0 40px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 52fr 42fr;
     align-items: center;
-    gap: 24px;
+    column-gap: clamp(48px, 4vw, 64px);
     position: relative;
     z-index: 2;
 }
 
-/* Left Column: Narrative */
+/* Left Column: Narrative (~52% width) */
 .hero-left-col {
     position: relative;
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 410px;
+    width: 100%;
+    max-width: 660px;
 }
 
 .hero-eyebrow {
@@ -353,7 +351,7 @@ button {
 /* Main Editorial Headline */
 .hero-headline {
     font-family: var(--font-serif);
-    font-size: clamp(2.8rem, 3.8vw, 4.2rem);
+    font-size: clamp(2.5rem, 3.8vw, 64px);
     font-weight: 700;
     line-height: 1.15;
     color: var(--text-primary);
@@ -412,19 +410,19 @@ button {
 
 /* Supporting Intro Text */
 .hero-intro {
-    font-size: 1.1rem;
-    line-height: 1.68;
+    font-size: 1.12rem;
+    line-height: 1.7;
     color: var(--text-secondary);
-    max-width: 440px;
+    max-width: 560px;
     margin-bottom: 34px;
     font-weight: 400;
 }
 
-/* Action Buttons */
+/* Action Buttons: Horizontally Aligned with 16px Gap */
 .hero-cta-group {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
@@ -432,12 +430,13 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 16px 34px;
+    padding: 15px 30px;
     border-radius: 10px;
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 0.98rem;
     font-weight: 600;
     text-decoration: none;
+    white-space: nowrap;
     transition: all var(--transition);
     cursor: pointer;
 }
@@ -479,20 +478,20 @@ button {
     transform: translate(2px, -2px);
 }
 
-/* Right Column: Balanced Centered Alignment */
+/* Right Column: Balanced Centered Alignment (~42% width) */
 .hero-right-col {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
-    flex: 0 0 auto;
-    width: auto;
+    width: 100%;
 }
 
 .portrait-stage {
     position: relative;
-    width: clamp(350px, 28vw, 410px);
-    height: clamp(460px, 36vw, 530px);
-    margin: 0;
+    width: clamp(400px, 30vw, 440px);
+    height: clamp(500px, 37vw, 550px);
+    margin: 0 auto;
 }
 
 /* Olive Offset Tilted Backdrop Card */
@@ -567,33 +566,33 @@ button {
     color: #556B2F;
 }
 
-/* Badge 1: Software Developer (Top-Left) */
+/* Badge 1: Software Developer (Top-Left) - Placed above shoulder, safely clear of face */
 .badge-developer {
-    top: 2%;
-    left: -10%;
-    transform: rotate(-4deg);
+    top: 3%;
+    left: -8%;
+    transform: rotate(-3deg);
 }
 
 .badge-developer:hover {
     transform: rotate(-1deg) scale(1.04);
 }
 
-/* Badge 2: Product Thinker (Mid-Right) */
+/* Badge 2: Product Thinker (Mid-Right) - Placed outside right frame */
 .badge-thinker {
     top: 50%;
-    right: -10%;
-    transform: rotate(1.5deg);
+    right: -8%;
+    transform: rotate(2deg);
 }
 
 .badge-thinker:hover {
     transform: rotate(0deg) scale(1.04);
 }
 
-/* Badge 3: Quality Engineer (Bottom-Left) */
+/* Badge 3: Quality Engineer (Bottom-Left) - Placed at bottom-left corner, away from face */
 .badge-quality {
-    bottom: 8%;
+    bottom: 6%;
     left: -8%;
-    transform: rotate(-2.5deg);
+    transform: rotate(-2deg);
 }
 
 .badge-quality:hover {
@@ -805,21 +804,21 @@ button {
 
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 
-/* Large Tablets & Mobile Displays (<= 880px) */
-@media (max-width: 880px) {
+/* Large Tablets & Medium Displays (<= 991px) */
+@media (max-width: 991px) {
     :root {
         --container-width: 92vw;
     }
 
     .hero-container {
-        flex-direction: column;
-        gap: 50px;
+        grid-template-columns: 1fr;
+        gap: 48px;
         text-align: center;
     }
 
     .hero-left-col {
-        max-width: 100%;
-        flex: 1 1 100%;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     .hero-eyebrow {
@@ -837,11 +836,12 @@ button {
 
     .hero-right-col {
         justify-content: center;
+        max-width: 100%;
     }
 
     .portrait-stage {
-        width: 380px;
-        height: 470px;
+        width: clamp(340px, 50vw, 400px);
+        height: clamp(430px, 62vw, 500px);
     }
 
     .floating-badge {
@@ -854,12 +854,12 @@ button {
     }
 
     .badge-thinker {
-        right: -6%;
+        right: -4%;
     }
 
     .badge-quality {
         bottom: 6%;
-        left: -6%;
+        left: -4%;
     }
 
     .approach-sequence-grid {
@@ -927,18 +927,18 @@ button {
     }
 
     .hero {
-        padding-top: calc(var(--nav-height) + 24px);
-        padding-bottom: 50px;
+        padding-top: calc(var(--nav-height) + 20px);
+        padding-bottom: 40px;
     }
 
     .hero-container {
-        padding: 10px 0 30px;
+        padding: 10px 0 20px;
         gap: 36px;
     }
 
     .hero-headline {
-        font-size: 2.35rem;
-        line-height: 1.22;
+        font-size: clamp(2rem, 7vw, 2.45rem);
+        line-height: 1.2;
     }
 
     .hero-headline .highlight-pill {
@@ -947,11 +947,23 @@ button {
 
     .hero-intro {
         font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .hero-cta-group {
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .btn-editorial {
+        padding: 13px 22px;
+        font-size: 0.94rem;
     }
 
     .portrait-stage {
-        width: 300px;
-        height: 380px;
+        width: clamp(290px, 80vw, 340px);
+        height: clamp(370px, 95vw, 430px);
     }
 
     .floating-badge {
@@ -961,17 +973,17 @@ button {
     }
 
     .badge-developer {
-        top: 0%;
-        left: -4%;
+        top: 1%;
+        left: -3%;
     }
 
     .badge-thinker {
-        right: -8%;
+        right: -5%;
     }
 
     .badge-quality {
         bottom: 4%;
-        left: -6%;
+        left: -4%;
     }
 
     .dashes-portrait {
@@ -994,5 +1006,38 @@ button {
 
     .approach-card:hover .card-connector-arrow {
         transform: rotate(90deg) translateY(-3px);
+    }
+}
+
+/* Small Mobile Screens (<= 480px / 390px) */
+@media (max-width: 480px) {
+    .portrait-stage {
+        width: min(85vw, 310px);
+        height: 390px;
+    }
+
+    .floating-badge {
+        font-size: 0.76rem;
+        padding: 6px 12px;
+        transform: scale(0.86) !important;
+    }
+
+    .badge-developer {
+        top: 1%;
+        left: -2%;
+    }
+
+    .badge-thinker {
+        right: -3%;
+    }
+
+    .badge-quality {
+        bottom: 3%;
+        left: -2%;
+    }
+
+    .btn-editorial {
+        width: 100%;
+        justify-content: center;
     }
 }
