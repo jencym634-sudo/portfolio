@@ -169,34 +169,176 @@ require_once 'includes/header.php';
     </div>
 </section>
 
-<?php
-/**
- * =========================================================================
- * SUBSEQUENT SECTIONS (Scope Rule 8: Implement ONLY Hero + Approach first.
- * About, Skills, Projects, Journey, and Contact will be styled upon approval).
- * =========================================================================
- */
-if (false):
-?>
+<!-- ===== SECTION 02: ABOUT ME ===== -->
+<section class="about-section" id="about">
+    <div class="editorial-shape shape-about-top-right" aria-hidden="true">
+        <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M280 20 C360 80 440 140 480 230 C520 320 440 380 340 370 C240 360 180 280 200 180 C210 110 230 -20 280 20 Z" fill="#E8EEDC" opacity="0.6"/>
+        </svg>
+    </div>
+    <div class="editorial-shape shape-about-bottom-left" aria-hidden="true">
+        <svg viewBox="0 0 460 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M120 40 C220 10 320 60 380 150 C440 240 400 340 300 360 C200 380 100 320 60 220 C20 120 60 60 120 40 Z" fill="#DFE7CE" opacity="0.5"/>
+        </svg>
+    </div>
 
-<!-- ===== ABOUT SECTION ===== -->
-<section class="section" id="about">
-    <div class="section-container">
-        <div class="section-header fade-in">
-            <span class="section-label">About Me</span>
-            <h2 class="section-title">Who I Am</h2>
-            <p class="section-subtitle">Get to know more about my journey and passion</p>
+    <div class="about-container">
+        <!-- A. Section Label -->
+        <div class="about-section-header">
+            <span class="about-section-tag">02 / ABOUT ME</span>
+            <span class="about-section-line"></span>
         </div>
 
-        <div class="about-content fade-in">
-            <div class="about-card glass-card">
-                <div class="about-text">
-                    <?php echo nl2br(e($about['content'] ?? 'Welcome to my portfolio!')); ?>
+        <!-- B. Introduction – Two Column Layout -->
+        <div class="about-intro-grid">
+            <div class="about-intro-left">
+                <h2 class="about-main-headline">
+                    A curious builder who connects people, problems and <span class="highlight-pill"><em>possible solutions</em></span>.
+                </h2>
+            </div>
+            <div class="about-intro-right">
+                <p class="about-paragraph">
+                    I'm Jency, a BCA graduate and a software developer from Tamil Nadu. I enjoy working at the intersection of technology, people and social impact.
+                </p>
+                <p class="about-paragraph">
+                    I like to explore existing tools, understand their strengths and limitations, and find practical ways to make them useful and accessible for real people and organisations.
+                </p>
+            </div>
+        </div>
+
+        <!-- C. Professional Snapshot Panel -->
+        <div class="about-snapshot-panel">
+            <div class="snapshot-item">
+                <div class="snapshot-icon-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    </svg>
+                </div>
+                <div class="snapshot-details">
+                    <h3 class="snapshot-title">BCA</h3>
+                    <p class="snapshot-desc">Bachelor of Computer Applications</p>
+                </div>
+            </div>
+
+            <div class="snapshot-divider" aria-hidden="true"></div>
+
+            <div class="snapshot-item">
+                <div class="snapshot-icon-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="snapshot-details">
+                    <h3 class="snapshot-title">Tech4Good Community</h3>
+                    <p class="snapshot-desc">Fellow | August 2025 – January 2027</p>
+                </div>
+            </div>
+
+            <div class="snapshot-divider" aria-hidden="true"></div>
+
+            <div class="snapshot-item">
+                <div class="snapshot-icon-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                </div>
+                <div class="snapshot-details">
+                    <h3 class="snapshot-title">Bengaluru, India</h3>
+                    <p class="snapshot-desc">Currently based here</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- D. Areas of Interest -->
+        <div class="areas-section">
+            <div class="areas-header">
+                <span class="areas-line"></span>
+                <h3 class="areas-heading">AREAS OF INTEREST</h3>
+                <span class="areas-line"></span>
+            </div>
+
+            <div class="areas-grid">
+                <div class="interest-card">
+                    <div class="interest-icon-circle">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="2" y1="20" x2="22" y2="20"/>
+                        </svg>
+                    </div>
+                    <h4 class="interest-title">Web & Application Development</h4>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon-circle">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <polyline points="9 12 11 14 15 10"/>
+                        </svg>
+                    </div>
+                    <h4 class="interest-title">Quality & Testing</h4>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon-circle">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                    </div>
+                    <h4 class="interest-title">Product Thinking</h4>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon-circle">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <h4 class="interest-title">Tool Exploration & Evaluation</h4>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon-circle">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h4 class="interest-title">Community Technology</h4>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon-circle">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h4 class="interest-title">Open Source & FOSS</h4>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<?php
+/**
+ * =========================================================================
+ * SUBSEQUENT SECTIONS (Scope Rule: Implement ONLY Hero + Approach + About.
+ * Skills, Projects, Journey, and Contact will be styled upon approval).
+ * =========================================================================
+ */
+if (false):
+?>
 
 <!-- ===== SKILLS SECTION ===== -->
 <section class="section" id="skills" style="background: var(--bg-secondary);">
