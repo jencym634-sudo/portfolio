@@ -75,7 +75,7 @@ require_once 'includes/header.php';
 
                 <!-- Main photo frame with white border and rounded corners -->
                 <div class="portrait-frame">
-                    <img src="assets/images/jency-portrait.jpg" 
+                    <img src="assets/images/jency-portrait.jpg?v=<?php echo @filemtime('assets/images/jency-portrait.jpg') ?: time(); ?>" 
                          alt="Jency M. - Portrait" 
                          class="portrait-img" 
                          loading="eager">
@@ -362,7 +362,7 @@ require_once 'includes/header.php';
             <!-- Project 01: AI App Builder -->
             <article class="project-editorial-card">
                 <div class="project-card-media video-preview-wrap" id="videoTriggerAiApp" role="button" tabindex="0" aria-label="Play AI App Builder project demonstration video" onclick="openModal('videoModal', this)">
-                    <img src="assets/images/projects/ai_app_builder_thumb.jpg" 
+                    <img src="assets/images/projects/ai_app_builder_thumb.jpg?v=<?php echo @filemtime('assets/images/projects/ai_app_builder_thumb.jpg') ?: time(); ?>" 
                          alt="AI App Builder project video preview" 
                          class="project-img" 
                          loading="lazy">
@@ -398,7 +398,7 @@ require_once 'includes/header.php';
             <!-- Project 02: IdliStack -->
             <article class="project-editorial-card">
                 <div class="project-card-media" id="idliMediaTrigger" role="button" tabindex="0" aria-label="Explore IdliStack project details" style="cursor: pointer;" onclick="openModal('idliModal', this)">
-                    <img src="assets/images/projects/idlistack_stall_landscape.jpg" 
+                    <img src="assets/images/projects/idlistack_stall_landscape.jpg?v=<?php echo @filemtime('assets/images/projects/idlistack_stall_landscape.jpg') ?: time(); ?>" 
                          alt="Jency presenting IdliStack at the Tech4Good Community event stall" 
                          class="project-img" 
                          loading="lazy">
@@ -608,7 +608,7 @@ require_once 'includes/header.php';
         </div>
         <div class="modal-body case-study-body">
             <div class="case-study-photo-wrap">
-                <img src="assets/images/projects/idlistack_stall_landscape.jpg" alt="IdliStack showcase at Tech4Good Summit stall" class="modal-hero-img">
+                <img src="assets/images/projects/idlistack_stall_landscape.jpg?v=<?php echo @filemtime('assets/images/projects/idlistack_stall_landscape.jpg') ?: time(); ?>" alt="IdliStack showcase at Tech4Good Summit stall" class="modal-hero-img">
             </div>
             <div class="case-study-block">
                 <h4 class="case-study-subheading">About the Work</h4>
@@ -710,7 +710,7 @@ require_once 'includes/header.php';
             <!-- Right Area: Team Stage Photograph -->
             <div class="fellowship-photo-col">
                 <div class="fellowship-photo-frame">
-                    <img src="assets/images/experience/tech4good_team_stage.jpg" 
+                    <img src="assets/images/experience/tech4good_team_stage.jpg?v=<?php echo @filemtime('assets/images/experience/tech4good_team_stage.jpg') ?: time(); ?>" 
                          alt="Tech4Good Community team on stage at IdliStack showcase" 
                          class="fellowship-photo-img">
                 </div>
