@@ -627,6 +627,210 @@ require_once 'includes/header.php';
     </div>
 </div>
 
+<!-- ===== SECTION 04: EXPERIENCE ===== -->
+<section class="experience-section" id="journey">
+    <!-- Anchor alias for #experience so both #journey and #experience work -->
+    <span id="experience" class="section-anchor" aria-hidden="true"></span>
+
+    <!-- Subtle background geometric shapes -->
+    <div class="editorial-shape shape-experience-top-right" aria-hidden="true">
+        <svg viewBox="0 0 520 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M280 20 C380 60 480 140 500 240 C520 340 440 400 340 390 C240 380 160 300 180 200 C190 120 220 10 280 20 Z" fill="#E8EEDC" opacity="0.6"/>
+        </svg>
+    </div>
+    <div class="editorial-shape shape-experience-bottom-left" aria-hidden="true">
+        <svg viewBox="0 0 460 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M120 40 C220 10 320 60 380 150 C440 240 400 340 300 360 C200 380 100 320 60 220 C20 120 60 60 120 40 Z" fill="#DFE7CE" opacity="0.5"/>
+        </svg>
+    </div>
+
+    <div class="experience-container">
+        <!-- Section Label -->
+        <div class="experience-section-header">
+            <span class="experience-section-tag">04 / EXPERIENCE</span>
+            <span class="experience-section-line"></span>
+        </div>
+
+        <!-- Section Title & Subtitle -->
+        <div class="experience-title-wrap">
+            <div class="experience-headline-row">
+                <h2 class="experience-main-headline">
+                    From exploring tools to building <span class="highlight-pill"><em>useful solutions.</em></span>
+                </h2>
+                <span class="headline-accent-slashes" aria-hidden="true">
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none">
+                        <line x1="6" y1="22" x2="12" y2="2" stroke="#879B55" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="14" y1="22" x2="20" y2="2" stroke="#879B55" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="22" y1="22" x2="28" y2="2" stroke="#879B55" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </span>
+            </div>
+            <p class="experience-subtitle">
+                A hands-on experience where I worked across research, engineering, quality and community to make open-source tools more usable.
+            </p>
+        </div>
+
+        <!-- Fellowship Overview Card -->
+        <div class="fellowship-overview-card">
+            <!-- Left Area: Tech4Good Community Brand -->
+            <div class="fellowship-brand-col">
+                <div class="fellowship-brand">
+                    <svg class="t4gc-arc-mark" width="40" height="40" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+                        <path d="M 28 7 A 14.5 14.5 0 1 0 7 26" fill="none" stroke="#7E9B42" stroke-width="4.2" stroke-linecap="round"/>
+                    </svg>
+                    <div class="t4gc-brand-text">
+                        <span class="t4gc-brand-main">Tech4Good</span>
+                        <span class="t4gc-brand-sub">Community</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Area: Fellowship Role Details -->
+            <div class="fellowship-info-col">
+                <div class="fellowship-role-row">
+                    <h3 class="fellowship-role-title">Software Engineer Fellow</h3>
+                    <span class="fellow-arrow" aria-hidden="true">↗</span>
+                </div>
+                <div class="fellowship-badge-row">
+                    <span class="fellowship-date-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>August 2025 – January 2027</span>
+                    </span>
+                </div>
+                <p class="fellowship-description">
+                    Contributing to product initiatives like IdliStack and FMS across research, development, testing, security and user engagement.
+                </p>
+            </div>
+
+            <!-- Right Area: Team Stage Photograph -->
+            <div class="fellowship-photo-col">
+                <div class="fellowship-photo-frame">
+                    <img src="assets/images/experience/tech4good_team_stage.jpg" 
+                         alt="Tech4Good Community team on stage at IdliStack showcase" 
+                         class="fellowship-photo-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- Subheading: My Work Across the Product Journey -->
+        <div class="journey-subheading-wrap">
+            <h3 class="journey-subheading">My Work Across the Product Journey</h3>
+            <span class="journey-subheading-line"></span>
+        </div>
+
+        <!-- 4 Activity Cards in 2x2 Grid -->
+        <div class="journey-grid">
+
+            <!-- Card 01: Product Research & Discovery -->
+            <div class="journey-card">
+                <div class="journey-card-icon-wrap" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <div class="journey-card-divider" aria-hidden="true"></div>
+                <div class="journey-card-content">
+                    <h4 class="journey-card-title">Product Research &amp; Discovery</h4>
+                    <ul class="journey-bullet-list">
+                        <li>Researched and evaluated open-source applications for IdliStack.</li>
+                        <li>Prepared research documentation and competitor analysis.</li>
+                        <li>Identified relevant tools and feature opportunities.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 02: Engineering & Technical Exploration -->
+            <div class="journey-card">
+                <div class="journey-card-icon-wrap" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <div class="journey-card-divider" aria-hidden="true"></div>
+                <div class="journey-card-content">
+                    <h4 class="journey-card-title">Engineering &amp; Technical Exploration</h4>
+                    <ul class="journey-bullet-list">
+                        <li>Explored open-source technologies and their capabilities.</li>
+                        <li>Understood application workflows and technical aspects.</li>
+                        <li>Worked on feature exploration and problem-solving with a product lens.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 03: Quality & Reliability -->
+            <div class="journey-card">
+                <div class="journey-card-icon-wrap" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                </div>
+                <div class="journey-card-divider" aria-hidden="true"></div>
+                <div class="journey-card-content">
+                    <h4 class="journey-card-title">Quality &amp; Reliability</h4>
+                    <ul class="journey-bullet-list">
+                        <li>Started with manual testing and validated workflows.</li>
+                        <li>Built and maintained Cypress test automation.</li>
+                        <li>Conducted API testing.</li>
+                        <li>Performed security testing for key application flows.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 04: Product & User Engagement -->
+            <div class="journey-card">
+                <div class="journey-card-icon-wrap" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <div class="journey-card-divider" aria-hidden="true"></div>
+                <div class="journey-card-content">
+                    <h4 class="journey-card-title">Product &amp; User Engagement</h4>
+                    <ul class="journey-bullet-list">
+                        <li>Explained IdliStack and its applications at community stalls.</li>
+                        <li>Presented FMS demonstrations to users.</li>
+                        <li>Collected and evaluated user feedback.</li>
+                        <li>Captured feature requests and collaborated on improvements.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Impact & Learning Card -->
+        <div class="impact-card">
+            <div class="impact-card-left">
+                <div class="impact-icon-circle" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                </div>
+                <h4 class="impact-card-title">Impact &amp; Learning</h4>
+            </div>
+            <div class="impact-card-divider" aria-hidden="true"></div>
+            <div class="impact-card-right">
+                <p class="impact-card-desc">
+                    Gained end-to-end product exposure — from exploring and evaluating tools to testing, understanding user needs and contributing to product improvements.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <?php
 /**
  * =========================================================================

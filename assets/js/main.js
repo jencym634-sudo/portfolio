@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ===== ACTIVE NAV LINK =====
-    const sections = document.querySelectorAll('.section, .hero, .about-section, .work-section');
+    const sections = document.querySelectorAll('.section, .hero, .about-section, .work-section, .experience-section');
     const navLinks = document.querySelectorAll('.nav-link');
 
     function updateActiveLink() {
