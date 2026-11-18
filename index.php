@@ -13,7 +13,7 @@ $skills = db_fetch_all($conn, "SELECT * FROM skills ORDER BY percentage DESC");
 $projects = db_fetch_all($conn, "SELECT * FROM projects ORDER BY created_at DESC");
 $social_links = db_fetch_all($conn, "SELECT * FROM social_links ORDER BY id ASC");
 
-$page_title = 'Jency | Full-Stack Developer & Designer';
+$page_title = 'Jency | Software Developer & Product Engineer';
 require_once 'includes/header.php';
 ?>
 
@@ -608,7 +608,7 @@ require_once 'includes/header.php';
         </div>
         <div class="modal-body case-study-body">
             <div class="case-study-photo-wrap">
-                <img src="assets/images/projects/idlistack_stall.jpg" alt="IdliStack showcase at Tech4Good Summit stall" class="modal-hero-img">
+                <img src="assets/images/projects/idlistack_stall_landscape.jpg" alt="IdliStack showcase at Tech4Good Summit stall" class="modal-hero-img">
             </div>
             <div class="case-study-block">
                 <h4 class="case-study-subheading">About the Work</h4>

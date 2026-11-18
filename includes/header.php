@@ -4,7 +4,7 @@
  * Expects $page_title to be set before including.
  */
 if (!isset($page_title))
-    $page_title = 'Jency | Portfolio';
+    $page_title = 'Jency | Software Developer & Product Engineer';
 ?>
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
@@ -16,9 +16,19 @@ if (!isset($page_title))
         content="Jency M. — Product Engineer & Software Developer. Explore my work, product thinking, and journey.">
     <meta name="keywords" content="developer, product engineer, portfolio, software developer, quality engineer">
     <meta name="author" content="Jency M.">
-    <title>
-        <?php echo e($page_title ?? 'Jency M. | Product Engineer'); ?>
-    </title>
+    <title><?php echo e($page_title ?? 'Jency | Software Developer & Product Engineer'); ?></title>
+
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?php echo e($page_title ?? 'Jency | Software Developer & Product Engineer'); ?>">
+    <meta property="og:description" content="Jency M. — Product Engineer & Software Developer. Explore my work, product thinking, and journey.">
+    <meta property="og:image" content="assets/images/jency-portrait.jpg">
+
+    <!-- Twitter / X Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo e($page_title ?? 'Jency | Software Developer & Product Engineer'); ?>">
+    <meta name="twitter:description" content="Jency M. — Product Engineer & Software Developer. Explore my work, product thinking, and journey.">
+    <meta name="twitter:image" content="assets/images/jency-portrait.jpg">
 
     <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
