@@ -361,7 +361,7 @@ require_once 'includes/header.php';
 
             <!-- Project 01: AI App Builder -->
             <article class="project-editorial-card">
-                <div class="project-card-media video-preview-wrap" id="videoTriggerAiApp" role="button" tabindex="0" aria-label="Play AI App Builder project demonstration video">
+                <div class="project-card-media video-preview-wrap" id="videoTriggerAiApp" role="button" tabindex="0" aria-label="Play AI App Builder project demonstration video" onclick="openModal('videoModal', this)">
                     <img src="assets/images/projects/ai_app_builder_thumb.jpg" 
                          alt="AI App Builder project video preview" 
                          class="project-img" 
@@ -387,7 +387,7 @@ require_once 'includes/header.php';
                         <span class="tech-pill">AI</span>
                     </div>
                     <div class="project-action-row">
-                        <button type="button" class="btn-project-cta" id="btnWatchAiApp">
+                        <button type="button" class="btn-project-cta" id="btnWatchAiApp" onclick="openModal('videoModal', this)">
                             <span>Watch Project</span>
                             <span class="cta-icon" aria-hidden="true">▶</span>
                         </button>
@@ -397,7 +397,7 @@ require_once 'includes/header.php';
 
             <!-- Project 02: IdliStack -->
             <article class="project-editorial-card">
-                <div class="project-card-media">
+                <div class="project-card-media" id="idliMediaTrigger" role="button" tabindex="0" aria-label="Explore IdliStack project details" style="cursor: pointer;" onclick="openModal('idliModal', this)">
                     <img src="assets/images/projects/idlistack_stall_landscape.jpg" 
                          alt="Jency presenting IdliStack at the Tech4Good Community event stall" 
                          class="project-img" 
@@ -415,7 +415,7 @@ require_once 'includes/header.php';
                         <span class="tech-pill">Open Source</span>
                     </div>
                     <div class="project-action-row">
-                        <button type="button" class="btn-project-cta" id="btnExploreIdliStack">
+                        <button type="button" class="btn-project-cta" id="btnExploreIdliStack" onclick="openModal('idliModal', this)">
                             <span>Explore Work</span>
                             <span class="cta-icon" aria-hidden="true">→</span>
                         </button>
@@ -425,7 +425,7 @@ require_once 'includes/header.php';
 
             <!-- Project 03: FMS Testing -->
             <article class="project-editorial-card card-text-led">
-                <div class="project-card-media fms-visual-card">
+                <div class="project-card-media fms-visual-card" id="fmsMediaTrigger" role="button" tabindex="0" aria-label="View FMS Testing Case Study" style="cursor: pointer;" onclick="openModal('caseStudyModal', this)">
                     <div class="fms-schematic-wrap">
                         <div class="fms-badge-status">
                             <span class="status-pulse-dot" aria-hidden="true"></span>
@@ -461,7 +461,7 @@ require_once 'includes/header.php';
                         <span class="tech-pill">Cypress</span>
                     </div>
                     <div class="project-action-row">
-                        <button type="button" class="btn-project-cta" id="btnViewFmsCaseStudy">
+                        <button type="button" class="btn-project-cta" id="btnViewFmsCaseStudy" onclick="openModal('caseStudyModal', this)">
                             <span>View Case Study</span>
                             <span class="cta-icon" aria-hidden="true">→</span>
                         </button>
@@ -471,7 +471,12 @@ require_once 'includes/header.php';
 
             <!-- Project 04: Cypress Automation -->
             <article class="project-editorial-card">
-                <div class="project-card-media cypress-visual-card">
+                <a href="https://github.com/jencym634-sudo/idlistack-react-cypress" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="project-card-media cypress-visual-card"
+                   aria-label="View Cypress Automation repository on GitHub"
+                   style="text-decoration: none; cursor: pointer;">
                     <div class="cypress-preview-box">
                         <div class="cypress-box-header">
                             <span class="terminal-dots" aria-hidden="true">
@@ -489,7 +494,7 @@ require_once 'includes/header.php';
                             <span class="code-line">});</span>
                         </div>
                     </div>
-                </div>
+                </a>
                 <div class="project-card-content">
                     <div class="project-meta-top">
                         <span class="project-category-tag">AUTOMATION</span>
@@ -519,11 +524,11 @@ require_once 'includes/header.php';
 
 <!-- ===== ACCESSIBLE VIDEO MODAL (AI App Builder) ===== -->
 <div class="project-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" hidden>
-    <div class="modal-backdrop" id="videoModalBackdrop"></div>
+    <div class="modal-backdrop" id="videoModalBackdrop" onclick="closeModal(document.getElementById('videoModal'))"></div>
     <div class="modal-dialog video-modal-dialog">
         <div class="modal-header">
             <h3 class="modal-title" id="videoModalTitle">AI App Builder — Project Demonstration</h3>
-            <button type="button" class="modal-close-btn" id="closeVideoModal" aria-label="Close video player">
+            <button type="button" class="modal-close-btn" id="closeVideoModal" aria-label="Close video player" onclick="closeModal(document.getElementById('videoModal'))">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -532,7 +537,7 @@ require_once 'includes/header.php';
         </div>
         <div class="modal-body">
             <div class="video-player-container">
-                <video id="aiAppVideoPlayer" controls preload="metadata" poster="assets/images/projects/ai_app_builder_thumb.jpg">
+                <video id="aiAppVideoPlayer" controls playsinline webkit-playsinline preload="auto" poster="assets/images/projects/ai_app_builder_thumb.jpg">
                     <source src="assets/videos/ai_app_builder.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -544,14 +549,14 @@ require_once 'includes/header.php';
 
 <!-- ===== CASE STUDY MODAL (FMS Testing) ===== -->
 <div class="project-modal" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="caseStudyModalTitle" hidden>
-    <div class="modal-backdrop" id="caseStudyModalBackdrop"></div>
+    <div class="modal-backdrop" id="caseStudyModalBackdrop" onclick="closeModal(document.getElementById('caseStudyModal'))"></div>
     <div class="modal-dialog case-study-modal-dialog">
         <div class="modal-header">
             <div>
                 <span class="project-category-tag">QUALITY ENGINEERING</span>
                 <h3 class="modal-title" id="caseStudyModalTitle">FMS Testing — Workflow Validation</h3>
             </div>
-            <button type="button" class="modal-close-btn" id="closeCaseStudyModal" aria-label="Close case study">
+            <button type="button" class="modal-close-btn" id="closeCaseStudyModal" aria-label="Close case study" onclick="closeModal(document.getElementById('caseStudyModal'))">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -587,14 +592,14 @@ require_once 'includes/header.php';
 
 <!-- ===== EXPLORE MODAL (IdliStack) ===== -->
 <div class="project-modal" id="idliModal" role="dialog" aria-modal="true" aria-labelledby="idliModalTitle" hidden>
-    <div class="modal-backdrop" id="idliModalBackdrop"></div>
+    <div class="modal-backdrop" id="idliModalBackdrop" onclick="closeModal(document.getElementById('idliModal'))"></div>
     <div class="modal-dialog case-study-modal-dialog">
         <div class="modal-header">
             <div>
                 <span class="project-category-tag">PRODUCT THINKING</span>
                 <h3 class="modal-title" id="idliModalTitle">IdliStack — Open-Source Exploration</h3>
             </div>
-            <button type="button" class="modal-close-btn" id="closeIdliModal" aria-label="Close details">
+            <button type="button" class="modal-close-btn" id="closeIdliModal" aria-label="Close details" onclick="closeModal(document.getElementById('idliModal'))">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>

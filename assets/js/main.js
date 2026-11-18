@@ -233,12 +233,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
-            e.preventDefault();
-            const target = document.querySelector(anchor.getAttribute('href'));
-            if (target) {
-                const offset = 80;
-                const top = target.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
+            const href = anchor.getAttribute('href');
+            if (!href || href === '#' || href.length < 2) return;
+            try {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            } catch (err) {
+                // Ignore invalid selectors
             }
         });
     });
@@ -259,14 +265,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
         activeModal = modal;
 
-        // If this is the video modal, play video
+        // If this is the video modal, play video with graceful autoplay fallback
         if (modalId === 'videoModal') {
             const video = document.getElementById('aiAppVideoPlayer');
             if (video) {
                 video.currentTime = 0;
-                video.play().catch(() => {
-                    // Autoplay with sound might require user gesture or muted in some browsers
-                });
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch((err) => {
+                        console.warn('Unmuted autoplay prevented by browser policy; retrying muted:', err);
+                        // If browser policy prevents unmuted playback, mute and retry so video plays immediately
+                        video.muted = true;
+                        video.play().catch((err2) => {
+                            console.warn('Video playback requires user gesture on controls:', err2);
+                        });
+                    });
+                }
             }
         }
 
@@ -282,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('active');
         document.body.style.overflow = '';
 
-        // If this is the video modal, pause video
+        // If this is the video modal, pause and reset video immediately
         const video = modal.querySelector('video');
         if (video) {
             video.pause();
@@ -298,11 +312,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 250);
     }
 
-    // Video Modal Triggers
+    // Expose globally so inline onclick attributes and external calls work reliably
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+
+    // Direct event delegation for all modal actions (handles dynamic or early clicks)
+    document.addEventListener('click', (e) => {
+        // 1. Triggers
+        const trigger = e.target.closest('#btnWatchAiApp, #videoTriggerAiApp, #btnExploreIdliStack, #idliMediaTrigger, #btnViewFmsCaseStudy, #fmsMediaTrigger, [data-modal-target]');
+        if (trigger) {
+            if (trigger.id === 'btnWatchAiApp' || trigger.id === 'videoTriggerAiApp') {
+                e.preventDefault();
+                openModal('videoModal', trigger);
+            } else if (trigger.id === 'btnExploreIdliStack' || trigger.id === 'idliMediaTrigger') {
+                e.preventDefault();
+                openModal('idliModal', trigger);
+            } else if (trigger.id === 'btnViewFmsCaseStudy' || trigger.id === 'fmsMediaTrigger') {
+                e.preventDefault();
+                openModal('caseStudyModal', trigger);
+            } else if (trigger.dataset && trigger.dataset.modalTarget) {
+                e.preventDefault();
+                openModal(trigger.dataset.modalTarget, trigger);
+            }
+            return;
+        }
+
+        // 2. Close Buttons
+        const closeBtn = e.target.closest('.modal-close-btn');
+        if (closeBtn) {
+            const modal = closeBtn.closest('.project-modal');
+            if (modal) {
+                e.preventDefault();
+                closeModal(modal);
+            }
+            return;
+        }
+
+        // 3. Backdrop Click
+        if (e.target.classList && e.target.classList.contains('modal-backdrop')) {
+            const modal = e.target.closest('.project-modal');
+            if (modal) {
+                e.preventDefault();
+                closeModal(modal);
+            }
+        }
+    });
+
+    // Keyboard support for video trigger
     const videoTriggerAiApp = document.getElementById('videoTriggerAiApp');
-    const btnWatchAiApp = document.getElementById('btnWatchAiApp');
     if (videoTriggerAiApp) {
-        videoTriggerAiApp.addEventListener('click', () => openModal('videoModal', videoTriggerAiApp));
         videoTriggerAiApp.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -310,34 +368,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    if (btnWatchAiApp) {
-        btnWatchAiApp.addEventListener('click', () => openModal('videoModal', btnWatchAiApp));
-    }
-
-    // Case Study Modal Trigger
-    const btnViewFmsCaseStudy = document.getElementById('btnViewFmsCaseStudy');
-    if (btnViewFmsCaseStudy) {
-        btnViewFmsCaseStudy.addEventListener('click', () => openModal('caseStudyModal', btnViewFmsCaseStudy));
-    }
-
-    // IdliStack Modal Trigger
-    const btnExploreIdliStack = document.getElementById('btnExploreIdliStack');
-    if (btnExploreIdliStack) {
-        btnExploreIdliStack.addEventListener('click', () => openModal('idliModal', btnExploreIdliStack));
-    }
-
-    // Close buttons & backdrop clicks
-    document.querySelectorAll('.project-modal').forEach(modal => {
-        const closeBtn = modal.querySelector('.modal-close-btn');
-        const backdrop = modal.querySelector('.modal-backdrop');
-
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => closeModal(modal));
-        }
-        if (backdrop) {
-            backdrop.addEventListener('click', () => closeModal(modal));
-        }
-    });
 
     // Close on Escape key
     document.addEventListener('keydown', (e) => {

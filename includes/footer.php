@@ -24,8 +24,8 @@
     </div>
 </footer>
 
-<!-- Main JavaScript -->
-<script src="assets/js/main.js"></script>
+<!-- Main JavaScript (Auto Cache-Busting via filemtime) -->
+<script src="assets/js/main.js?v=<?php echo @filemtime('assets/js/main.js') ?: time(); ?>"></script>
 </body>
 
 </html>
