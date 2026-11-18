@@ -831,6 +831,130 @@ require_once 'includes/header.php';
     </div>
 </section>
 
+<!-- ===== SECTION 05: LET'S CONNECT ===== -->
+<section class="contact-section" id="contact">
+    <!-- Subtle background geometric shapes -->
+    <div class="editorial-shape shape-contact-top-left" aria-hidden="true">
+        <svg viewBox="0 0 520 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M120 40 C220 10 360 80 440 180 C520 280 460 380 340 390 C220 400 120 320 80 220 C40 120 60 60 120 40 Z" fill="#E8EEDC" opacity="0.6"/>
+        </svg>
+    </div>
+    <div class="editorial-shape shape-contact-bottom-right" aria-hidden="true">
+        <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M280 20 C360 80 440 140 480 230 C520 320 440 380 340 370 C240 360 180 280 200 180 C210 110 230 -20 280 20 Z" fill="#DFE7CE" opacity="0.55"/>
+        </svg>
+    </div>
+
+    <div class="contact-container">
+        <!-- Section Label -->
+        <div class="contact-section-header">
+            <span class="contact-section-tag">05 / LET'S CONNECT</span>
+            <span class="contact-section-line"></span>
+        </div>
+
+        <!-- Section Title & Subtitle -->
+        <div class="contact-title-wrap">
+            <div class="contact-headline-row">
+                <h2 class="contact-main-headline">
+                    Have something <span class="highlight-pill"><em>interesting in mind?</em></span>
+                </h2>
+                <span class="headline-accent-slashes" aria-hidden="true">
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none">
+                        <line x1="6" y1="22" x2="12" y2="2" stroke="#879B55" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="14" y1="22" x2="20" y2="2" stroke="#879B55" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="22" y1="22" x2="28" y2="2" stroke="#879B55" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </span>
+            </div>
+            <p class="contact-subtitle">
+                Whether it's an opportunity, a collaboration, a technical discussion or simply an interesting idea, I'd love to hear from you.
+            </p>
+        </div>
+
+        <!-- Main Contact Hero Card -->
+        <div class="contact-hero-card">
+            <div class="contact-primary-block">
+                <!-- Prominent Primary Email CTA -->
+                <div class="contact-cta-wrap">
+                    <a href="mailto:jencym634@gmail.com" class="btn-talk-prominent" aria-label="Send email to Jency (jencym634@gmail.com)">
+                        <span class="btn-talk-icon-wrap" aria-hidden="true">
+                            <i class="fa-regular fa-envelope"></i>
+                        </span>
+                        <span class="btn-talk-label">Let's Talk</span>
+                        <span class="btn-talk-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <p class="contact-secondary-text">
+                    I'm always happy to connect with people who enjoy building useful things.
+                </p>
+            </div>
+
+            <!-- Divider -->
+            <div class="contact-card-divider" aria-hidden="true"></div>
+
+            <!-- Contact Channels Grid (Email, GitHub, LinkedIn, Instagram) -->
+            <div class="contact-channels-grid">
+                <!-- Channel 1: Email -->
+                <a href="mailto:jencym634@gmail.com" class="channel-card" aria-label="Send email to jencym634@gmail.com">
+                    <div class="channel-card-top">
+                        <div class="channel-icon-wrap" aria-hidden="true">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <span class="channel-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="channel-card-body">
+                        <span class="channel-label">Email</span>
+                        <span class="channel-value">jencym634@gmail.com</span>
+                    </div>
+                </a>
+
+                <!-- Channel 2: GitHub -->
+                <a href="https://github.com/jencym634-sudo" target="_blank" rel="noopener noreferrer" class="channel-card" aria-label="Open GitHub profile in new tab">
+                    <div class="channel-card-top">
+                        <div class="channel-icon-wrap" aria-hidden="true">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <span class="channel-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="channel-card-body">
+                        <span class="channel-label">GitHub</span>
+                        <span class="channel-value">jencym634-sudo</span>
+                    </div>
+                </a>
+
+                <!-- Channel 3: LinkedIn -->
+                <a href="https://linkedin.com/in/jency-m-31291735a" target="_blank" rel="noopener noreferrer" class="channel-card" aria-label="Open LinkedIn profile in new tab">
+                    <div class="channel-card-top">
+                        <div class="channel-icon-wrap" aria-hidden="true">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <span class="channel-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="channel-card-body">
+                        <span class="channel-label">LinkedIn</span>
+                        <span class="channel-value">jency-m-31291735a</span>
+                    </div>
+                </a>
+
+                <!-- Channel 4: Instagram (Placeholder) -->
+                <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="channel-card" aria-label="Open Instagram profile placeholder in new tab">
+                    <div class="channel-card-top">
+                        <div class="channel-icon-wrap" aria-hidden="true">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <span class="channel-arrow" aria-hidden="true">↗</span>
+                    </div>
+                    <div class="channel-card-body">
+                        <span class="channel-label">Instagram</span>
+                        <span class="channel-value">@yourusername</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <?php
 /**
  * =========================================================================

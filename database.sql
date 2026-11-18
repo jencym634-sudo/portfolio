@@ -109,6 +109,6 @@ INSERT INTO `projects` (`title`, `description`, `tech_stack`, `github_link`, `de
 
 -- Sample Social Links
 INSERT INTO `social_links` (`platform`, `url`, `icon`) VALUES
-('GitHub', 'https://github.com/jency', 'fa-brands fa-github'),
-('LinkedIn', 'https://linkedin.com/in/jency', 'fa-brands fa-linkedin'),
-('Twitter', 'https://twitter.com/jency', 'fa-brands fa-twitter');
+('GitHub', 'https://github.com/jencym634-sudo', 'fa-brands fa-github'),
+('LinkedIn', 'https://linkedin.com/in/jency-m-31291735a', 'fa-brands fa-linkedin'),
+('Instagram', 'https://instagram.com/yourusername', 'fa-brands fa-instagram');
