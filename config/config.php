@@ -31,7 +31,9 @@ if (!$conn && file_exists('/.dockerenv')) {
 }
 
 // Set charset to UTF-8
-mysqli_set_charset($conn, 'utf8mb4');
+if ($conn) {
+    mysqli_set_charset($conn, 'utf8mb4');
+}
 
 // Start session if not already started
 if (session_status() === PHP_SESSION_NONE) {

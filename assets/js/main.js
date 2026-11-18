@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ===== ACTIVE NAV LINK =====
-    const sections = document.querySelectorAll('.section, .hero');
+    const sections = document.querySelectorAll('.section, .hero, .about-section, .work-section');
     const navLinks = document.querySelectorAll('.nav-link');
 
     function updateActiveLink() {
@@ -241,5 +241,108 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.scrollTo({ top, behavior: 'smooth' });
             }
         });
+    });
+
+    // ===== SECTION 03: ACCESSIBLE MODALS & VIDEO PLAYER =====
+    let activeModal = null;
+    let lastActiveTrigger = null;
+
+    function openModal(modalId, triggerElement) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        lastActiveTrigger = triggerElement || document.activeElement;
+        modal.removeAttribute('hidden');
+        // Force reflow for smooth CSS transition
+        void modal.offsetWidth;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        activeModal = modal;
+
+        // If this is the video modal, play video
+        if (modalId === 'videoModal') {
+            const video = document.getElementById('aiAppVideoPlayer');
+            if (video) {
+                video.currentTime = 0;
+                video.play().catch(() => {
+                    // Autoplay with sound might require user gesture or muted in some browsers
+                });
+            }
+        }
+
+        // Focus close button
+        const closeBtn = modal.querySelector('.modal-close-btn');
+        if (closeBtn) {
+            closeBtn.focus();
+        }
+    }
+
+    function closeModal(modal) {
+        if (!modal) return;
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // If this is the video modal, pause video
+        const video = modal.querySelector('video');
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        setTimeout(() => {
+            modal.setAttribute('hidden', '');
+            if (lastActiveTrigger && typeof lastActiveTrigger.focus === 'function') {
+                lastActiveTrigger.focus();
+            }
+            activeModal = null;
+        }, 250);
+    }
+
+    // Video Modal Triggers
+    const videoTriggerAiApp = document.getElementById('videoTriggerAiApp');
+    const btnWatchAiApp = document.getElementById('btnWatchAiApp');
+    if (videoTriggerAiApp) {
+        videoTriggerAiApp.addEventListener('click', () => openModal('videoModal', videoTriggerAiApp));
+        videoTriggerAiApp.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal('videoModal', videoTriggerAiApp);
+            }
+        });
+    }
+    if (btnWatchAiApp) {
+        btnWatchAiApp.addEventListener('click', () => openModal('videoModal', btnWatchAiApp));
+    }
+
+    // Case Study Modal Trigger
+    const btnViewFmsCaseStudy = document.getElementById('btnViewFmsCaseStudy');
+    if (btnViewFmsCaseStudy) {
+        btnViewFmsCaseStudy.addEventListener('click', () => openModal('caseStudyModal', btnViewFmsCaseStudy));
+    }
+
+    // IdliStack Modal Trigger
+    const btnExploreIdliStack = document.getElementById('btnExploreIdliStack');
+    if (btnExploreIdliStack) {
+        btnExploreIdliStack.addEventListener('click', () => openModal('idliModal', btnExploreIdliStack));
+    }
+
+    // Close buttons & backdrop clicks
+    document.querySelectorAll('.project-modal').forEach(modal => {
+        const closeBtn = modal.querySelector('.modal-close-btn');
+        const backdrop = modal.querySelector('.modal-backdrop');
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => closeModal(modal));
+        }
+        if (backdrop) {
+            backdrop.addEventListener('click', () => closeModal(modal));
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && activeModal) {
+            closeModal(activeModal);
+        }
     });
 });

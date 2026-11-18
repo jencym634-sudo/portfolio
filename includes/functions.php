@@ -126,6 +126,8 @@ function delete_upload($path)
  */
 function db_fetch_all($conn, $query)
 {
+    if (!$conn)
+        return [];
     $result = mysqli_query($conn, $query);
     if (!$result)
         return [];
@@ -142,6 +144,8 @@ function db_fetch_all($conn, $query)
  */
 function db_fetch_one($conn, $query)
 {
+    if (!$conn)
+        return null;
     $result = mysqli_query($conn, $query);
     if (!$result)
         return null;

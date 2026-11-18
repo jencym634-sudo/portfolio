@@ -330,11 +330,303 @@ require_once 'includes/header.php';
     </div>
 </section>
 
+<!-- ===== SECTION 03: SELECTED WORK ===== -->
+<section class="work-section" id="work">
+    <!-- Subtle background geometric shape -->
+    <div class="editorial-shape shape-work-top-left" aria-hidden="true">
+        <svg viewBox="0 0 520 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M120 40 C220 10 360 80 440 180 C520 280 460 380 340 390 C220 400 120 320 80 220 C40 120 60 60 120 40 Z" fill="#E8EEDC" opacity="0.55"/>
+        </svg>
+    </div>
+
+    <div class="work-container">
+        <!-- Section Label -->
+        <div class="work-section-header">
+            <span class="work-section-tag">03 / SELECTED WORK</span>
+            <span class="work-section-line"></span>
+        </div>
+
+        <!-- Section Title & Subtitle -->
+        <div class="work-title-wrap">
+            <h2 class="work-main-headline">
+                Things I've explored, <span class="highlight-pill"><em>built and improved.</em></span>
+            </h2>
+            <p class="work-subtitle">
+                A selection of my engineering, testing and product work.
+            </p>
+        </div>
+
+        <!-- Four Project Cards in 2-Column Grid -->
+        <div class="work-grid">
+
+            <!-- Project 01: AI App Builder -->
+            <article class="project-editorial-card">
+                <div class="project-card-media video-preview-wrap" id="videoTriggerAiApp" role="button" tabindex="0" aria-label="Play AI App Builder project demonstration video">
+                    <img src="assets/images/projects/ai_app_builder_thumb.jpg" 
+                         alt="AI App Builder project video preview" 
+                         class="project-img" 
+                         loading="lazy">
+                    <div class="video-play-overlay">
+                        <span class="play-btn-circle" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </span>
+                        <span class="play-label">Watch Demo</span>
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <div class="project-meta-top">
+                        <span class="project-category-tag">ENGINEERING</span>
+                    </div>
+                    <h3 class="project-headline">AI App Builder</h3>
+                    <p class="project-summary">Building applications through AI and Frappe.</p>
+                    <div class="project-tags">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Frappe</span>
+                        <span class="tech-pill">AI</span>
+                    </div>
+                    <div class="project-action-row">
+                        <button type="button" class="btn-project-cta" id="btnWatchAiApp">
+                            <span>Watch Project</span>
+                            <span class="cta-icon" aria-hidden="true">▶</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 02: IdliStack -->
+            <article class="project-editorial-card">
+                <div class="project-card-media">
+                    <img src="assets/images/projects/idlistack_stall_landscape.jpg" 
+                         alt="Jency presenting IdliStack at the Tech4Good Community event stall" 
+                         class="project-img" 
+                         loading="lazy">
+                </div>
+                <div class="project-card-content">
+                    <div class="project-meta-top">
+                        <span class="project-category-tag">PRODUCT THINKING</span>
+                    </div>
+                    <h3 class="project-headline">IdliStack</h3>
+                    <p class="project-summary">Exploring open-source tools and improving product experience.</p>
+                    <div class="project-tags">
+                        <span class="tech-pill">Research</span>
+                        <span class="tech-pill">UX</span>
+                        <span class="tech-pill">Open Source</span>
+                    </div>
+                    <div class="project-action-row">
+                        <button type="button" class="btn-project-cta" id="btnExploreIdliStack">
+                            <span>Explore Work</span>
+                            <span class="cta-icon" aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 03: FMS Testing -->
+            <article class="project-editorial-card card-text-led">
+                <div class="project-card-media fms-visual-card">
+                    <div class="fms-schematic-wrap">
+                        <div class="fms-badge-status">
+                            <span class="status-pulse-dot" aria-hidden="true"></span>
+                            <span>QUALITY VALIDATION SUITE</span>
+                        </div>
+                        <div class="fms-architecture-grid">
+                            <div class="fms-arch-node">
+                                <span class="arch-label">API Endpoints</span>
+                                <span class="arch-val">Schema Checks</span>
+                            </div>
+                            <div class="fms-arch-arrow" aria-hidden="true">→</div>
+                            <div class="fms-arch-node node-highlight">
+                                <span class="arch-label">Workflow Logic</span>
+                                <span class="arch-val">Edge Case Audits</span>
+                            </div>
+                            <div class="fms-arch-arrow" aria-hidden="true">→</div>
+                            <div class="fms-arch-node">
+                                <span class="arch-label">Regression</span>
+                                <span class="arch-val">Cypress Workflows</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <div class="project-meta-top">
+                        <span class="project-category-tag">QUALITY ENGINEERING</span>
+                    </div>
+                    <h3 class="project-headline">FMS Testing</h3>
+                    <p class="project-summary">Validating workflows and identifying platform issues.</p>
+                    <div class="project-tags">
+                        <span class="tech-pill">Testing</span>
+                        <span class="tech-pill">API</span>
+                        <span class="tech-pill">Cypress</span>
+                    </div>
+                    <div class="project-action-row">
+                        <button type="button" class="btn-project-cta" id="btnViewFmsCaseStudy">
+                            <span>View Case Study</span>
+                            <span class="cta-icon" aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 04: Cypress Automation -->
+            <article class="project-editorial-card">
+                <div class="project-card-media cypress-visual-card">
+                    <div class="cypress-preview-box">
+                        <div class="cypress-box-header">
+                            <span class="terminal-dots" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </span>
+                            <span class="terminal-title">idlistack-react-cypress</span>
+                            <span class="repo-badge">GitHub</span>
+                        </div>
+                        <div class="cypress-code-snippet">
+                            <span class="code-line"><span class="code-keyword">describe</span>(<span class="code-str">'E2E Test Workflows'</span>, () => {</span>
+                            <span class="code-line indent-1"><span class="code-keyword">it</span>(<span class="code-str">'validates user authentication lifecycle'</span>, () => {</span>
+                            <span class="code-line indent-2"><span class="code-fn">cy</span>.<span class="code-method">visit</span>(<span class="code-str">'/auth/login'</span>);</span>
+                            <span class="code-line indent-2"><span class="code-fn">cy</span>.<span class="code-method">assertWorkflowIntegrity</span>();</span>
+                            <span class="code-line indent-1">});</span>
+                            <span class="code-line">});</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <div class="project-meta-top">
+                        <span class="project-category-tag">AUTOMATION</span>
+                    </div>
+                    <h3 class="project-headline">Cypress Automation</h3>
+                    <p class="project-summary">Developing reusable end-to-end test workflows.</p>
+                    <div class="project-tags">
+                        <span class="tech-pill">Cypress</span>
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">CI/CD</span>
+                    </div>
+                    <div class="project-action-row">
+                        <a href="https://github.com/jencym634-sudo/idlistack-react-cypress" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn-project-cta">
+                            <span>View Repository</span>
+                            <span class="cta-icon" aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== ACCESSIBLE VIDEO MODAL (AI App Builder) ===== -->
+<div class="project-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" hidden>
+    <div class="modal-backdrop" id="videoModalBackdrop"></div>
+    <div class="modal-dialog video-modal-dialog">
+        <div class="modal-header">
+            <h3 class="modal-title" id="videoModalTitle">AI App Builder — Project Demonstration</h3>
+            <button type="button" class="modal-close-btn" id="closeVideoModal" aria-label="Close video player">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="video-player-container">
+                <video id="aiAppVideoPlayer" controls preload="metadata" poster="assets/images/projects/ai_app_builder_thumb.jpg">
+                    <source src="assets/videos/ai_app_builder.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="modal-caption">Building applications through AI and Frappe.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CASE STUDY MODAL (FMS Testing) ===== -->
+<div class="project-modal" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="caseStudyModalTitle" hidden>
+    <div class="modal-backdrop" id="caseStudyModalBackdrop"></div>
+    <div class="modal-dialog case-study-modal-dialog">
+        <div class="modal-header">
+            <div>
+                <span class="project-category-tag">QUALITY ENGINEERING</span>
+                <h3 class="modal-title" id="caseStudyModalTitle">FMS Testing — Workflow Validation</h3>
+            </div>
+            <button type="button" class="modal-close-btn" id="closeCaseStudyModal" aria-label="Close case study">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body case-study-body">
+            <div class="case-study-block">
+                <h4 class="case-study-subheading">Project Focus</h4>
+                <p>Validating workflows, examining API communication patterns, and uncovering critical edge-case platform issues across core business operations.</p>
+            </div>
+            <div class="case-study-block">
+                <h4 class="case-study-subheading">Key Testing Scope</h4>
+                <ul class="case-study-list">
+                    <li><strong>API Schema Validation:</strong> Verifying data contracts, payload structures, and response status handling across integration endpoints.</li>
+                    <li><strong>Role & Permission Verification:</strong> Testing access boundaries and multi-role data governance to prevent unauthorized data exposure.</li>
+                    <li><strong>Workflow Failure Modes:</strong> Simulating network timeouts, interrupted state transactions, and invalid field combinations.</li>
+                    <li><strong>Regression Safeguards:</strong> Creating automated Cypress suites to preserve stability during continuous deployments.</li>
+                </ul>
+            </div>
+            <div class="case-study-block">
+                <h4 class="case-study-subheading">Tech Stack</h4>
+                <div class="project-tags">
+                    <span class="tech-pill">Cypress</span>
+                    <span class="tech-pill">API Testing</span>
+                    <span class="tech-pill">Postman</span>
+                    <span class="tech-pill">JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== EXPLORE MODAL (IdliStack) ===== -->
+<div class="project-modal" id="idliModal" role="dialog" aria-modal="true" aria-labelledby="idliModalTitle" hidden>
+    <div class="modal-backdrop" id="idliModalBackdrop"></div>
+    <div class="modal-dialog case-study-modal-dialog">
+        <div class="modal-header">
+            <div>
+                <span class="project-category-tag">PRODUCT THINKING</span>
+                <h3 class="modal-title" id="idliModalTitle">IdliStack — Open-Source Exploration</h3>
+            </div>
+            <button type="button" class="modal-close-btn" id="closeIdliModal" aria-label="Close details">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body case-study-body">
+            <div class="case-study-photo-wrap">
+                <img src="assets/images/projects/idlistack_stall.jpg" alt="IdliStack showcase at Tech4Good Summit stall" class="modal-hero-img">
+            </div>
+            <div class="case-study-block">
+                <h4 class="case-study-subheading">About the Work</h4>
+                <p>Exploring open-source digital public goods and FOSS tooling. Designed practical workflows and showcased self-hosted community solutions at the Tech4Good Summit, helping grassroots organisations understand and adopt privacy-respecting technology.</p>
+            </div>
+            <div class="case-study-block">
+                <h4 class="case-study-subheading">Areas Explored</h4>
+                <div class="project-tags">
+                    <span class="tech-pill">Research</span>
+                    <span class="tech-pill">UX Analysis</span>
+                    <span class="tech-pill">Open Source</span>
+                    <span class="tech-pill">Community Tech</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php
 /**
  * =========================================================================
- * SUBSEQUENT SECTIONS (Scope Rule: Implement ONLY Hero + Approach + About.
- * Skills, Projects, Journey, and Contact will be styled upon approval).
+ * SUBSEQUENT SECTIONS (Scope Rule: Implement ONLY Hero + Approach + About + Selected Work.
+ * Skills, Journey, and Contact will be styled upon approval).
  * =========================================================================
  */
 if (false):
@@ -362,70 +654,6 @@ if (false):
                     </div>
                     <div class="skill-bar">
                         <div class="skill-progress" data-percentage="<?php echo (int) $skill['percentage']; ?>"></div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
-<!-- ===== PROJECTS SECTION ===== -->
-<section class="section" id="projects">
-    <div class="section-container">
-        <div class="section-header fade-in">
-            <span class="section-label">My Projects</span>
-            <h2 class="section-title">Recent Work</h2>
-            <p class="section-subtitle">Some of my favorite projects I've worked on</p>
-        </div>
-
-        <div class="projects-grid">
-            <?php foreach ($projects as $i => $project): ?>
-                <div class="project-card glass-card fade-in" style="transition-delay: <?php echo $i * 0.15; ?>s;">
-                    <div class="project-image">
-                        <?php if (!empty($project['image'])): ?>
-                            <img src="<?php echo e($project['image']); ?>" alt="<?php echo e($project['title']); ?>"
-                                loading="lazy">
-                        <?php else: ?>
-                            <div class="project-image-placeholder">
-                                <i class="fas fa-code"></i>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                    <div class="project-body">
-                        <h3 class="project-title">
-                            <?php echo e($project['title']); ?>
-                        </h3>
-                        <p class="project-desc">
-                            <?php echo e($project['description']); ?>
-                        </p>
-
-                        <?php if (!empty($project['tech_stack'])): ?>
-                            <div class="project-tech">
-                                <?php
-                                $techs = explode(',', $project['tech_stack']);
-                                foreach ($techs as $tech):
-                                    ?>
-                                    <span class="tech-tag">
-                                        <?php echo e(trim($tech)); ?>
-                                    </span>
-                                <?php endforeach; ?>
-                            </div>
-                        <?php endif; ?>
-
-                        <div class="project-links">
-                            <?php if (!empty($project['github_link'])): ?>
-                                <a href="<?php echo e($project['github_link']); ?>" target="_blank" rel="noopener"
-                                    class="project-link project-link-github">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            <?php endif; ?>
-                            <?php if (!empty($project['demo_link'])): ?>
-                                <a href="<?php echo e($project['demo_link']); ?>" target="_blank" rel="noopener"
-                                    class="project-link project-link-demo">
-                                    <i class="fas fa-external-link-alt"></i> Demo
-                                </a>
-                            <?php endif; ?>
-                        </div>
                     </div>
                 </div>
             <?php endforeach; ?>
