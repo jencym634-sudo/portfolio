@@ -28,7 +28,7 @@
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
             <!-- Instagram (replaces Twitter) -->
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer"
+            <a href="https://instagram.com/michael_jency" target="_blank" rel="noopener noreferrer"
                 class="social-link" title="Instagram" aria-label="Instagram profile">
                 <i class="fa-brands fa-instagram"></i>
             </a>
