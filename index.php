@@ -936,8 +936,8 @@ require_once 'includes/header.php';
                     </div>
                 </a>
 
-                <!-- Channel 4: Instagram (Placeholder) -->
-                <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="channel-card" aria-label="Open Instagram profile placeholder in new tab">
+                <!-- Channel 4: Instagram -->
+                <a href="https://instagram.com/michael_jency" target="_blank" rel="noopener noreferrer" class="channel-card" aria-label="Open Instagram profile in new tab">
                     <div class="channel-card-top">
                         <div class="channel-icon-wrap" aria-hidden="true">
                             <i class="fa-brands fa-instagram"></i>
@@ -946,7 +946,7 @@ require_once 'includes/header.php';
                     </div>
                     <div class="channel-card-body">
                         <span class="channel-label">Instagram</span>
-                        <span class="channel-value">@yourusername</span>
+                        <span class="channel-value">@michael_jency</span>
                     </div>
                 </a>
             </div>
